@@ -47,6 +47,26 @@
             <button class="abc" onclick="action('wordcount')">WordCount</button>
         </div>
     </div>
+    <script>
+        function action(effect) {
+            const lmn = document.getElementById('inputText').value
+            const pqr = document.getElementById('resultText');
+
+            switch (effect) {
+                case 'uppercase':
+                    pqr.innerText = lmn.toUpperCase()
+                    break;
+                case 'lowercase':
+                    pqr.innerText = lmn.toLowerCase()
+                    break;
+                case 'charactercount':
+                    pqr.innerText = lmn.length;
+                    break;
+                default:
+                    pqr.innerText = lmn.split(" ").length;
+            }
+        }
+    </script>
 </body>
 
 </html>
